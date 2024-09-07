@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Sign On Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showSuccessAlert() {
+            alert("Form submitted successfully!");
+        }
+    </script>
+</head>
+<body>
+    <form id="sso" action="process_form.php" method="POST" onsubmit="showSuccessAlert()">
+        <h2>Student Sign On Form</h2><br>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" title="Please enter your username" required><br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" title="Please enter your email address" required><br><br>
+
+        <label for="perguruanTinggi">Perguruan Tinggi</label>
+        <input type="text" id="perguruanTinggi" name="perguruanTinggi" placeholder="Enter your university name" title="Please enter your university name" required><br><br>
+
+        <label for="prodi">Program Studi</label><br>
+        <input type="radio" id="informatika" name="prodi" value="Informatika" title="Select Informatika" required> Informatika<br>
+        <input type="radio" id="matematika" name="prodi" value="Matematika" title="Select Matematika"> Matematika<br>
+        <input type="radio" id="fisika" name="prodi" value="Fisika" title="Select Fisika"> Fisika<br>
+        <input type="radio" id="kimia" name="prodi" value="Kimia" title="Select Kimia"> Kimia<br>
+        <input type="radio" id="statistika" name="prodi" value="Statistika" title="Select Statistika"> Statistika<br>
+        <input type="radio" id="biologi" name="prodi" value="Biologi" title="Select Biologi"> Biologi<br><br>
+
+        <label for="hobi">Hobi</label><br>
+        <input type="checkbox" id="futsal" name="hobi[]" value="Futsal" title="Select Futsal"> Futsal<br>
+        <input type="checkbox" id="badminton" name="hobi[]" value="Badminton" title="Select Badminton"> Badminton<br>
+        <input type="checkbox" id="membaca" name="hobi[]" value="Membaca" title="Select Membaca"> Membaca<br>
+        <input type="checkbox" id="menulis" name="hobi[]" value="Menulis" title="Select Menulis"> Menulis<br>
+        <input type="checkbox" id="travelling" name="hobi[]" value="Travelling" title="Select Travelling"> Travelling<br><br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" title="Please enter your password" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
